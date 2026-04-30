@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Traillog Account & Data Deletion</title>
+<style>
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --card: #111827;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --line: #243042;
+    --accent: #60a5fa;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.container { max-width: 860px; margin: 0 auto; padding: 32px 18px 48px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 28px 22px; }
+h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 2.5vw, 2rem); line-height: 1.25; letter-spacing: -0.01em; }
+h2 { margin: 28px 0 10px; font-size: 1.1rem; line-height: 1.35; }
+p { margin: 10px 0; }
+ul, ol { margin: 8px 0 0; padding-left: 22px; }
+li { margin: 6px 0; }
+.muted { color: var(--muted); font-size: 0.95rem; }
+.top-rule { height: 3px; width: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), transparent 70%); margin-bottom: 18px; }
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 6px;
+}
+table { border-collapse: collapse; margin: 10px 0; width: 100%; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--bg); font-weight: 600; }
+code { background: var(--bg); padding: 2px 6px; border-radius: 4px; font-size: 0.92em; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="top-rule"></div>
+    <h1>Traillog Account &amp; Data Deletion</h1>
+    <p class="muted">Last updated: 2026-04-29 &middot; Published by Weganar</p>
+
+    <p>This page explains how to delete your Traillog account and what happens to your data.</p>
+
+    <h2>Option 1: Delete from inside the app (fastest)</h2>
+    <ol>
+      <li>Open Traillog on your Android device.</li>
+      <li>Go to <strong>Settings &rarr; Account</strong>.</li>
+      <li>Tap <strong>Delete account</strong>.</li>
+      <li>Confirm when prompted.</li>
+    </ol>
+    <p>Your Firebase account, your cloud-synced trip data in Firestore, and any active shares are removed within a few seconds of confirmation. Local data on the device is cleared when you uninstall the app.</p>
+
+    <h2>Option 2: Request deletion by email</h2>
+    <p>If you no longer have the app installed, or you cannot sign in, you can request deletion by email.</p>
+    <p>Send an email to <a href="mailto:support@weganar.com?subject=Traillog%20account%20deletion%20request">support@weganar.com</a> from the address associated with your Traillog account, with the subject:</p>
+    <p><code>Traillog account deletion request</code></p>
+    <p>We will process the request and confirm completion by email within 30 days. Most requests are completed within 72 hours.</p>
+    <p><a class="btn" href="mailto:support@weganar.com?subject=Traillog%20account%20deletion%20request&amp;body=I%20would%20like%20to%20delete%20my%20Traillog%20account%20and%20associated%20data.%0A%0AEmail%20on%20account%3A%20%0AAccount%20type%20%28Google%20%2F%20Apple%20%2F%20Anonymous%29%3A%20">Email deletion request</a></p>
+
+    <h2>What gets deleted</h2>
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Deleted on request?</th><th>Retention</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Trip recordings, timeline segments, personal records</td>
+          <td>Yes</td>
+          <td>Removed from Firestore immediately; on-device copy cleared on uninstall.</td>
+        </tr>
+        <tr>
+          <td>Shared trips you created</td>
+          <td>Yes</td>
+          <td>Recipients lose access when the share is deleted.</td>
+        </tr>
+        <tr>
+          <td>Firebase Authentication account</td>
+          <td>Yes</td>
+          <td>Google / Apple / anonymous account is deleted.</td>
+        </tr>
+        <tr>
+          <td>Cloud-synced settings and preferences</td>
+          <td>Yes</td>
+          <td>Removed with the account.</td>
+        </tr>
+        <tr>
+          <td>Crash reports (Firebase Crashlytics)</td>
+          <td>Partially</td>
+          <td>Anonymous crash entries are retained up to 90 days for product stability analysis. No raw user identifiers are stored — IDs are redacted before upload.</td>
+        </tr>
+        <tr>
+          <td>Anonymous analytics (Firebase Analytics)</td>
+          <td>Partially</td>
+          <td>Aggregated, non-identifying analytics are retained up to 14 months per Google's default retention. No personally identifiable information is linked to this data.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Children</h2>
+    <p>Traillog is not directed at children under 13. If you are a parent or guardian and believe your child has created an account, email <a href="mailto:support@weganar.com">support@weganar.com</a> and we will delete the account.</p>
+
+    <h2>Contact</h2>
+    <p>Questions? Reach us at <a href="mailto:support@weganar.com">support@weganar.com</a>.</p>
+
+    <p class="muted">See also: <a href="traillog-privacy-policy-android.html">Privacy Policy</a>.</p>
+  </div>
+</div>
+</body>
+</html>
