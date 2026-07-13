@@ -4,81 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Traillog Privacy Policy</title>
-  <meta name="description" content="Traillog Privacy Policy" />
+  <meta name="description" content="Privacy policy for Traillog on iPhone, iPad, and Apple Watch." />
   <style>
-    :root {
-      --bg: #f7f8fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --line: #e5e7eb;
-      --accent: #2563eb;
-    }
-
+    :root { --bg:#f7f8fb; --card:#fff; --text:#1f2937; --muted:#6b7280; --line:#e5e7eb; --accent:#2563eb; }
     @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b1220;
-        --card: #111827;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --line: #243042;
-        --accent: #60a5fa;
-      }
+      :root { --bg:#0b1220; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#243042; --accent:#60a5fa; }
     }
-
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 32px 18px 48px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 28px 22px;
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(1.6rem, 2.5vw, 2rem);
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-    }
-
-    h2 {
-      margin: 28px 0 10px;
-      font-size: 1.1rem;
-      line-height: 1.35;
-    }
-
-    p { margin: 10px 0; }
-    ul {
-      margin: 8px 0 0;
-      padding-left: 22px;
-    }
-    li { margin: 6px 0; }
-
-    .muted {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .top-rule {
-      height: 3px;
-      width: 100%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), transparent 70%);
-      margin-bottom: 18px;
-    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+    .container { max-width:860px; margin:0 auto; padding:32px 18px 48px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:28px 22px; }
+    h1 { margin:0 0 8px; font-size:clamp(1.6rem,2.5vw,2rem); line-height:1.25; letter-spacing:-.01em; }
+    h2 { margin:28px 0 10px; font-size:1.1rem; line-height:1.35; }
+    p { margin:10px 0; }
+    ul { margin:8px 0 0; padding-left:22px; }
+    li { margin:6px 0; }
+    a { color:var(--accent); }
+    .muted { color:var(--muted); font-size:.95rem; }
+    .top-rule { height:3px; width:100%; border-radius:999px; background:linear-gradient(90deg,var(--accent),transparent 70%); margin-bottom:18px; }
   </style>
 </head>
 <body>
@@ -86,80 +29,78 @@
     <article class="card">
       <div class="top-rule" aria-hidden="true"></div>
       <h1>Traillog Privacy Policy</h1>
-      <p class="muted">Last updated: 2026-02-16</p>
+      <p class="muted">Last updated: 2026-07-13</p>
 
-      <p>
-        Traillog is a location timeline app. This policy explains what data the app uses
-        and how you control it.
-      </p>
+      <p>Traillog is a location timeline app published by Weganar Consulting LLC. This policy explains what the app processes, where information is stored, and the controls available to you.</p>
 
       <h2>Data We Process</h2>
-      <p>Depending on the features you use, Traillog may process:</p>
+      <p>Depending on the features you enable and the permissions you grant, Traillog may process:</p>
       <ul>
-        <li>Location data (to build your timeline).</li>
-        <li>Motion and fitness data (for steps and movement enrichment).</li>
-        <li>Health data (for heart rate and workout metrics, when granted).</li>
-        <li>Photo metadata and selected photo references (for timeline photo matching, when granted).</li>
-        <li>Optional notes, tags, and titles you add to segments.</li>
-        <li>iCloud sharing metadata for people you share with.</li>
+        <li>Precise or approximate location, timestamps, routes, and learned places used to build your timeline.</li>
+        <li>Motion and fitness information such as steps, movement type, cadence, and floors.</li>
+        <li>Health information you authorize, including workouts, heart rate, heart-rate variability, calories, sleep, respiratory rate, blood oxygen, wrist temperature, mobility, training load, and effort scores.</li>
+        <li>Photo metadata and photos used to match images with timeline entries. Access occurs only after you grant permission.</li>
+        <li>Notes, tags, titles, saved places, activity goals, and other information you choose to enter.</li>
+        <li>Sharing identity, participant, and fixed emoji-reaction information used by optional collaboration features.</li>
+        <li>App settings, sync state, and diagnostic logs needed to operate, recover, and troubleshoot the app.</li>
       </ul>
 
       <h2>Where Data Is Stored</h2>
       <ul>
-        <li>Data is stored locally on your device.</li>
-        <li>If iCloud sync/sharing is enabled, data is synced using Apple's CloudKit infrastructure tied to your Apple ID.</li>
-        <li>We do not run our own location-data backend outside Apple services for core timeline storage.</li>
+        <li>Timeline information is stored locally on your device. Limited summaries may also be stored in an App Group container for Traillog widgets, complications, and Live Activities.</li>
+        <li>When iCloud is available, eligible timeline information may sync through Apple CloudKit tied to your Apple Account for backup, cross-device use, and sharing.</li>
+        <li><strong>HealthKit information, HealthKit-derived details, and direct Motion &amp; Fitness measurements such as steps, floors, cadence, and raw accelerometer samples stay on device. Traillog does not upload them to CloudKit or include them in iCloud shares.</strong></li>
+        <li>Information you explicitly share is stored in CloudKit shared databases and becomes available to the people included in that share.</li>
+        <li>Exports are saved to a location you choose or temporarily prepared for the iOS share sheet. You control copies sent to other apps, people, or storage providers.</li>
+        <li>Diagnostic logs stay on device unless you deliberately export or send them for support.</li>
       </ul>
+      <p>Traillog does not operate its own backend for your core timeline or location history.</p>
 
       <h2>How Data Is Used</h2>
-      <p>Data is used to:</p>
       <ul>
-        <li>Build and display your timeline (stays, trips, activities, lifestyle sessions).</li>
-        <li>Provide statistics, summaries, and map views.</li>
-        <li>Support optional sharing and collaboration features.</li>
-        <li>Support optional export features.</li>
+        <li>Build and display stays, trips, activities, and lifestyle sessions.</li>
+        <li>Provide statistics, summaries, maps, fitness insights, and recovery information.</li>
+        <li>Enrich timeline entries with authorized health, motion, weather, and photo context.</li>
+        <li>Provide optional sharing, export, widgets, Apple Watch, Live Activities, and notifications.</li>
+        <li>Maintain sync reliability and help you diagnose problems.</li>
       </ul>
+
+      <h2>Background Location</h2>
+      <p>If you choose Always Allow, Traillog can record location while the app is not visible so it can build a continuous timeline of stays and trips. You can use While Using or deny location access, but automatic background timeline coverage will be limited. You can stop tracking in Traillog and change location permission at any time in iOS Settings.</p>
+
+      <h2>On-Device Intelligence</h2>
+      <p>On supported devices, Apple Foundation Models may classify content, explain segments, create captions, offer coaching text, or interpret a timeline question. These features are designed to run on device. Traillog does not send your raw timeline to a developer-operated AI server.</p>
 
       <h2>Sharing</h2>
       <ul>
-        <li>Sharing is optional.</li>
-        <li>You control when and with whom data is shared.</li>
-        <li>You can revoke access by removing participants or deleting shares.</li>
+        <li>Sharing is optional and begins only after an action from you.</li>
+        <li>Timeline shares include only segment type, start and end time, an address or place label, and selected photos within the scope you choose.</li>
+        <li>Timeline shares do not include weather, an exact or raw route stream, HealthKit or Motion &amp; Fitness measurements, performance metrics, owner notes, or owner tags. Fixed emoji reactions are stored separately as participant collaboration data.</li>
+        <li>New Stats-only shares cannot be created. Previously accepted Stats-only links remain available as frozen, read-only compatibility views.</li>
+        <li>HealthKit information, HealthKit-derived details, and direct Motion &amp; Fitness measurements are never included in CloudKit shares.</li>
+        <li>You choose the people and scope included in a share. You can remove participants or delete a share to revoke future access.</li>
+        <li>Copies a recipient previously exported or captured cannot be recalled by Traillog.</li>
       </ul>
 
       <h2>Permissions</h2>
-      <p>Traillog requests only the permissions needed for enabled features:</p>
-      <ul>
-        <li>Location</li>
-        <li>Motion and Fitness</li>
-        <li>Health</li>
-        <li>Photos</li>
-      </ul>
-      <p>You can revoke permissions at any time in iOS Settings.</p>
+      <p>Traillog requests permissions only when needed for a feature, including Location, Motion &amp; Fitness, Health, Photos, Bluetooth for supported heart-rate monitors, and Notifications. You can revoke permissions at any time in iOS Settings.</p>
 
-      <h2>Data Retention and Control</h2>
-      <p>You can:</p>
-      <ul>
-        <li>Stop tracking at any time.</li>
-        <li>Configure location retention duration.</li>
-        <li>Export your data (where available).</li>
-        <li>Remove shared access by deleting shares.</li>
-      </ul>
+      <h2>Retention, Deletion, and Your Choices</h2>
+      <p>You can stop tracking, change local location-retention settings, export available data, remove sharing participants, delete shares, or delete local data, iCloud data, or both from Data &amp; Sync settings. If an iCloud deletion fails, Traillog reports it and may retry automatically. You can withdraw permission through iOS Settings.</p>
+      <p>Apple services and device backups may retain information for a limited period under Apple's own retention and recovery practices. Files you export or share outside Traillog must be deleted separately at their destination.</p>
 
-      <h2>Third-Party Services</h2>
-      <p>
-        Traillog relies on Apple frameworks and services such as CloudKit, MapKit,
-        WeatherKit, HealthKit, and Photos APIs as part of app functionality.
-      </p>
+      <h2>Apple Services</h2>
+      <p>Traillog uses Apple frameworks and services including CloudKit, MapKit, WeatherKit, HealthKit, Photos, StoreKit, Foundation Models, and notification services. Their processing is governed by Apple's terms and privacy practices. Traillog contains no third-party advertising or analytics SDK.</p>
 
       <h2>Children's Privacy</h2>
       <p>Traillog is not intended for children under 13.</p>
 
+      <h2>Contact</h2>
+      <p>Questions, privacy requests, or support inquiries: <a href="mailto:support@weganar.com">support@weganar.com</a>.</p>
+      <p>For product support, see the <a href="traillog-support.html">Traillog Support page</a>.</p>
+
       <h2>Changes to This Policy</h2>
-      <p>
-        We may update this policy from time to time. The latest version will be available
-        at the Privacy Policy URL provided in the app.
-      </p>
+      <p>We may update this policy as Traillog changes. The current version and update date will remain available at this URL and from the app.</p>
     </article>
   </main>
 </body>
