@@ -46,87 +46,96 @@ li { margin: 6px 0; }
   <div class="card">
     <div class="top-rule"></div>
     <h1>Traillog Privacy Policy</h1>
-    <p class="muted">Android edition &middot; Last updated: 2026-04-29</p>
 
-    <p>Traillog is a location timeline and fitness tracking app. This policy explains what data the Android app uses, how it is stored, and how you control it. The app is published by Weganar.</p>
+    <p class="muted">Android edition · Last updated: 2026-10-13</p>
 
-    <h2>Data We Process</h2>
-    <p>Depending on the features you use, Traillog may process:</p>
+    <p>Traillog is a location timeline and fitness tracking app published by Weganar. This policy explains the data used by Traillog for Android, including its current closed test, how it is handled, and your choices. Contact us at <a href="mailto:support@weganar.com">support@weganar.com</a>.</p>
+
+    <h2>Location, activity, and your timeline</h2>
+
+    <p>When you enable tracking and grant location permission, Traillog records precise or approximate location, timestamps, accuracy, altitude, speed, and related movement information. It uses these records to build your timeline, identify trips and stays, display routes, and calculate activity statistics. Motion sensors and Android activity recognition help distinguish activities such as walking, running, cycling, and driving. You may also enter titles, notes, tags, saved places, and preferences.</p>
+
+    <p>With background location permission, tracking can continue when the screen is locked or the app is not open. Tracking can record an ongoing daily timeline between manually started workouts. A persistent notification indicates that tracking is running. You can pause or stop tracking in the app or from its notification, and change foreground, background, or physical activity permissions in Android Settings. Without background permission, location recording is limited to when the app is visible. Disabling tracking or a permission does not erase existing records.</p>
+
+    <h2>Health and fitness information</h2>
+
+    <p>Health Connect access is optional and depends on the individual permissions you grant. Traillog can read steps, distance, active and total calories, floors climbed, heart rate, exercise sessions, speed, power, VO2 max, weight, height, body fat, sleep sessions, blood oxygen, respiratory rate, resting heart rate, and heart rate variability. These data support timeline summaries, workout statistics, heart rate zones, and fitness, recovery, sleep, and readiness views. The current Android closed test reads Health Connect data and does not write workouts or other records back to Health Connect.</p>
+
+    <p>You can optionally enter your age, weight, and maximum heart rate to personalize calculations. Paired Bluetooth fitness sensors and a Wear OS companion can provide heart rate and other supported workout measurements, such as speed, cadence, or power. Device names and addresses are used to find and reconnect to your selected sensors. Phone and watch exchange tracking and session information through Google&#x27;s Wearable Data Layer; the watch may buffer samples until it can deliver them to the phone.</p>
+
+    <p>Health and fitness processing takes place on your device. Health information embedded in a timeline record is included if you choose to back up or sync that record, or share an encrypted full timeline snapshot. The cloud protection and sharing limits below apply. The narrower owner-created shared feeds include activity type and timing, but exclude the health measurements. Traillog does not use Health Connect information for advertising, sell it, or send it to an advertising or analytics service.</p>
+
+    <p>You can revoke Health Connect permissions in Health Connect or Android Settings. Revocation stops future access; it does not erase copies already imported into Traillog. Delete those copies using Traillog&#x27;s local data controls. Original records can be managed and deleted in Health Connect; deleting Traillog&#x27;s local data does not delete those source records.</p>
+
+    <h2>Photos and selected files</h2>
+
+    <p>With photo access, Traillog reads accessible gallery images and their timestamps, local media references, and available location or EXIF metadata to match and display photos alongside your timeline. This matching does not automatically upload image files. Timeline backups and full snapshots can contain photo counts, timestamps, and local photo references, rather than the gallery images themselves.</p>
+
+    <p>The encrypted file-upload control lets you choose a file, including an image, for upload to VeilDock. The chosen file and its filename are encrypted on the device before upload. If you export a file, image, map card, or diagnostic log through Android&#x27;s share sheet or save it to a chosen document provider, that recipient app or provider receives the content you select and handles it under its own policy. Decrypted exports and recovery files saved outside Traillog are under your control. You can revoke photo access in Android Settings.</p>
+
+    <h2>Maps, weather, and place lookups</h2>
+
+    <p>Some features contact services independently of encrypted cloud backup or sync:</p>
+
     <ul>
-      <li>Precise and approximate location data (to record your trips and build your timeline).</li>
-      <li>Motion and activity recognition data (to detect walking, running, cycling, and driving).</li>
-      <li>Health and fitness data from Health Connect (heart rate, steps, distance, calories, exercise sessions, VO2 max, sleep, blood oxygen, resting heart rate, HRV, weight, height, body fat), only when the specific data type is granted.</li>
-      <li>Bluetooth data from paired fitness sensors (heart rate, cycling speed and cadence, cycling power, running footpods), only while you are using a paired device.</li>
-      <li>Photo metadata (EXIF timestamp and GPS coordinates) and references to selected photos, to match photos in your gallery to recorded trips. Photos themselves are not uploaded.</li>
-      <li>Optional notes, tags, and titles you add to segments.</li>
-      <li>Sharing metadata for people you invite to see your trips.</li>
-      <li>Anonymous device and crash diagnostics through Firebase Crashlytics and Analytics.</li>
+      <li>Google Maps provides map views and receives requests for the map areas displayed. Google&#x27;s Maps SDK also collects request and device information, an IP address, an SDK-specific pseudonymous identifier, SDK crash information, and map interaction events such as panning and zooming, as described in <a href="https://developers.google.com/maps/documentation/android-sdk/play-data-disclosure">Google&#x27;s Maps SDK disclosure</a>.</li>
+      <li>Google&#x27;s Weather API receives the latitude and longitude of a recorded location to return weather conditions for timeline enrichment.</li>
+      <li>Android&#x27;s geocoding service receives location coordinates to return addresses and place names. The provider depends on the device and may use a network service.</li>
     </ul>
 
-    <h2>Where Data Is Stored</h2>
-    <p>All recorded data is stored locally on your device in an encrypted database. If cloud sync is enabled, data is synced to Firebase Firestore using your Firebase Authentication account (anonymous, Google, or Apple). Sync is scoped so only you can read your data, and only people you explicitly share a trip with can read the subset you share.</p>
-    <p>Traillog opts out of Android Auto Backup for its core database and credentials, so your location history is not transferred to Google's backup system or to any new device without an explicit sign-in.</p>
+    <p>These providers can process the coordinates or request information needed to answer their requests; those requests are not protected by your VeilDock vault key. Weather and place enrichment can run on previously recorded segments, including when you have not signed into VeilDock. Turning off cloud sync does not disable these lookups. Google&#x27;s handling is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; other device geocoding providers may have their own policies.</p>
 
-    <h2>How Data Is Used</h2>
-    <p>Data is used to:</p>
-    <ul>
-      <li>Build and display your timeline (stays, trips, activities).</li>
-      <li>Provide statistics, summaries, trends, and map views.</li>
-      <li>Support optional trip sharing and the connected-people family map.</li>
-      <li>Support optional export and Wear OS companion features.</li>
-      <li>Monitor app stability through anonymous crash reports.</li>
-    </ul>
+    <h2>Local storage and protection</h2>
 
-    <h2>Background Location</h2>
-    <p>Traillog collects location data to record your trips even when the app is closed or your phone is locked. Recording only runs while a trip is active, and a persistent Android notification shows you whenever location is being accessed. You can pause or stop tracking at any time from the notification without unlocking the phone. When no trip is running, Traillog does not access location in the background.</p>
+    <p>Your timeline, location points, derived health and activity information, saved places, settings, and local diagnostics are stored in Traillog&#x27;s private app storage. The local Room database uses Android&#x27;s app and device storage protection; Traillog does not add a separate encrypted-database layer. Your device&#x27;s access controls therefore matter for the local copy.</p>
 
-    <h2>Sharing</h2>
-    <p>Sharing is optional. You control when and with whom trips are shared. You can revoke access by removing connected people or deleting a share. Traillog does not sell or share your data with advertising networks, data brokers, or any third party other than the infrastructure providers named in this policy.</p>
+    <p>Traillog disables Android automatic backup for sensitive app data. Its backup and device-transfer rules exclude the timeline database, sensitive preferences, and diagnostics, and allow only limited interface and onboarding preferences. Vault keys and cloud session credentials are protected with Android Keystore and kept outside system backup. These protections do not cover files you explicitly export or save to another provider.</p>
 
-    <h2>Permissions</h2>
-    <p>Traillog requests only the permissions needed for the features you enable:</p>
-    <ul>
-      <li>Location (foreground and background)</li>
-      <li>Activity Recognition</li>
-      <li>Bluetooth scan and connect (for fitness sensors)</li>
-      <li>Photos (Android 13 and later: Read media images)</li>
-      <li>Notifications (Android 13 and later)</li>
-      <li>Health Connect read and write access, granted individually per data type</li>
-    </ul>
-    <p>You can revoke any permission at any time in Android Settings, or the specific data types in the Health Connect app.</p>
+    <h2>Optional encrypted cloud features and accounts</h2>
 
-    <h2>Data Retention and Control</h2>
-    <p>You can:</p>
-    <ul>
-      <li>Stop tracking at any time.</li>
-      <li>Configure how long location points are retained on device.</li>
-      <li>Export your data (where available).</li>
-      <li>Remove shared access by deleting shares.</li>
-      <li>Delete your cloud account and its data from Settings &rarr; Account &rarr; Delete account. This removes your Firestore data and signs you out of all devices.</li>
-    </ul>
+    <p>You can use local tracking without a cloud account. Optional VeilDock features require Google sign-in and a vault key. The current closed test admits cloud accounts separately; the Android app does not offer account creation, anonymous cloud sign-in, or Apple sign-in.</p>
 
-    <h2>Diagnostics and Crash Reporting</h2>
-    <p>Crash reports and anonymous usage metrics are sent to Firebase Crashlytics and Firebase Analytics. Traillog redacts user, trip, share, and account identifiers and email addresses from crash logs before upload. Diagnostic collection is opt-out and can be disabled in Settings.</p>
+    <p>Google sign-in sends a Google identity token to VeilDock to verify your account. The token can contain your Google account identifier, email, name, and profile information. VeilDock identifies your admitted account using the provider identifier and assigned user and vault IDs. It also handles authentication sessions, quotas, and service metadata needed to authorize storage and sharing.</p>
 
-    <h2>Third-Party Services</h2>
-    <p>Traillog uses the following services as part of app functionality:</p>
-    <ul>
-      <li>Google Firebase Authentication, Firestore, Crashlytics, and Analytics (for accounts, cloud sync, and diagnostics).</li>
-      <li>Google Play Services Location and Activity Recognition (for GPS and motion).</li>
-      <li>Google Maps SDK for Android (for map views).</li>
-      <li>Health Connect by Google (for fitness data exchange).</li>
-      <li>Google Weather API (for weather enrichment of recorded segments).</li>
-      <li>Google Play Services Wearable Data Layer (for Wear OS companion support).</li>
-    </ul>
+    <p>When you choose a backup, file upload, or timeline sync, content is encrypted on the device before it reaches VeilDock. The service stores encrypted content and does not receive the vault decryption key or your recovery code. File names are inside the encrypted payload. VeilDock can see operational metadata, including account, vault, object, record, feed, and recipient identifiers; encrypted sizes and checksums; key commitments; revision and deletion markers; sharing state; and request timing. Encryption of content does not hide this metadata.</p>
 
-    <h2>Children's Privacy</h2>
-    <p>Traillog is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
+    <p>Automatic timeline sync is opt-in. It can upload existing and new timeline records and download records from your vault, including records that contain location, notes, and health summaries. Conflicting edits and removals may require review. You can turn automatic sync off or sign out to stop using that cloud session. Signing out does not delete local history, the protected device key, or cloud content.</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this policy from time to time. The date at the top of this page reflects the last update. Significant changes will be surfaced in the app.</p>
+    <p>Recovery codes and recovery files contain the key needed to decrypt your vault. Keep them private. Restoring on another installation requires the matching recovery material and account access. Weganar and VeilDock do not hold that decryption key and cannot recover encrypted content if you lose both the device key and recovery material.</p>
 
-    <h2>Contact</h2>
-    <p>Questions? Reach us at <a href="mailto:support@weganar.com">support@weganar.com</a>.</p>
+    <h2>Sharing and its limits</h2>
+
+    <p>Sharing is optional. Available controls can create an encrypted, recipient-specific snapshot or an owner-created shared feed. Full timeline snapshots can contain the selected timeline&#x27;s routes, times, notes, health summaries, and photo references. A snapshot is an immutable copy and uses its own share key file, which you deliver privately to the selected recipient. Do not send your vault recovery code as a share key.</p>
+
+    <p>Owner-created feeds publish only records in the scope you select, such as a date range or tag filter. Their shared fields are segment and activity type, times, coordinates, place names, and route paths, along with the share title and any sharing name you choose. They exclude gallery image files, private segment notes and titles, tags in the segment payload, and health measurements. An invitation link carries a feed key and should be sent privately. In this Android closed test, accepting these feed invitation links is not yet available. Legacy connected-people maps, shared comments, and reactions are not functioning cloud features in this release.</p>
+
+    <p>Revoking a snapshot blocks future downloads. Removing a feed recipient or deleting a feed ends their server access once the operation succeeds. Revocation cannot erase content or keys already downloaded, exported, copied, or captured by a recipient. A download already in progress may finish. Sharing with one person does not make their saved copy remotely erasable.</p>
+
+    <h2>Diagnostics and other services</h2>
+
+    <p>Traillog keeps local diagnostic logs and crash information, including app and Android versions, device model, operational events, recent log entries, and stack traces. It does not automatically send these app-owned logs to a remote crash or analytics service. You can view, clear, or export diagnostic information through the available diagnostic controls and choose whether to send it to support. Logs may contain information about your activity or errors; review an export before sharing it.</p>
+
+    <p>The current Android app does not use Firebase Authentication, Firestore, Firebase Analytics, or Crashlytics. This does not remove Google&#x27;s Maps SDK collection described above. Other Google components support sign-in, location and activity recognition, Health Connect, phone/watch communication, and Google Play billing. New paid purchases are unavailable in this closed test while purchase verification is unavailable; Traillog does not receive your payment card details.</p>
+
+    <p>We use data to provide the features described here, operate the optional cloud service, and respond to support messages. We do not sell your personal data or provide it to advertising networks. If you contact support, we receive the contact information and message or attachments you choose to send.</p>
+
+    <h2>Retention, deletion, and your choices</h2>
+
+    <p>Local location history is not subject to automatic age-based or queue-cap deletion. You can delete individual records or use the local data deletion and explicit purge controls where available. Temporary caches, export records, and diagnostic buffers can be cleaned up or bounded separately. Clearing Traillog&#x27;s app storage or uninstalling removes its private on-device copy; it does not remove your gallery originals, Health Connect records, externally saved exports, cloud copies, or copies held by recipients.</p>
+
+    <p>The Settings control labelled Delete Local Data clears local timeline data and related local records. It does not delete your cloud account or erase all cloud backups. Cloud data may be restored later. With opt-in timeline replication, record removals can be represented by sync deletion markers and applied on other devices; these logical removals do not physically erase retained backup objects or record revision history.</p>
+
+    <p>The closed-test cloud service retains backup objects, record history, and supporting account and storage metadata without automatic expiry of that content. Cloud account and general backup deletion are not available in this test. A displayed account-deletion action cannot complete cloud deletion in this release. Turning off sync, revoking a share, signing out, or uninstalling does not constitute cloud account deletion. This release does not offer a supported cloud account or backup deletion process or a deletion deadline.</p>
+
+    <p>Contact <a href="mailto:support@weganar.com">support@weganar.com</a> for privacy and cloud-access questions, including questions about your information or applicable privacy rights. Do not send a password, sign-in token, vault recovery code, or share key. Recipient copies and data held independently by Google or another provider must be managed with those recipients or providers. Depending on where you live, you may have additional privacy rights.</p>
+
+    <p>You can change permissions in Android Settings, revoke Health Connect access, unpair a sensor or watch, edit local records, disable automatic sync, and use the available export controls. Available exports are saved or shared only when you choose their destination; the app does not provide a complete account export through an automatic support upload.</p>
+
+    <h2>Children, policy changes, and contact</h2>
+
+    <p>Traillog is not directed to children under 13. We do not knowingly collect personal information from children under 13. Contact us if you believe a child has provided information through the service.</p>
+
+    <p>We may update this policy as the Android app changes. Updates will be posted at this page with a revised date. For questions, contact Weganar at <a href="mailto:support@weganar.com">support@weganar.com</a>.</p>
   </div>
 </div>
 </body>
