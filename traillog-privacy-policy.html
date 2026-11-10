@@ -29,7 +29,7 @@
     <article class="card">
       <div class="top-rule" aria-hidden="true"></div>
       <h1>Traillog Privacy Policy</h1>
-      <p class="muted">Last updated: 2026-10-15</p>
+      <p class="muted">Last updated: 2026-11-09</p>
 
       <p>Traillog is a location timeline app published by Weganar Consulting LLC. This policy explains what the app processes, where information is stored, and the controls available to you.</p>
 
@@ -39,6 +39,7 @@
         <li>Precise or approximate location, timestamps, routes, and learned places used to build your timeline.</li>
         <li>Motion and fitness information such as steps, movement type, cadence, and floors.</li>
         <li>Health information you authorize, including workouts, heart rate, heart-rate variability, calories, sleep, respiratory rate, blood oxygen, wrist temperature, mobility, training load, and effort scores.</li>
+        <li>Heart rate and supported saved health or workout records from a compatible H Band watch when you choose to connect it over Bluetooth.</li>
         <li>Photo metadata and photos used to match images with timeline entries. Access occurs only after you grant permission.</li>
         <li>Notes, tags, titles, saved places, activity goals, and other information you choose to enter.</li>
         <li>Sharing identity and participant information used by optional timeline-sharing features.</li>
@@ -93,6 +94,11 @@
 
       <h2>Apple Services</h2>
       <p>Traillog uses Apple frameworks and services including CloudKit, MapKit, WeatherKit, HealthKit, Photos, StoreKit, Foundation Models, and notification services. Their processing is governed by Apple's terms and privacy practices. Traillog contains no third-party advertising or analytics SDK.</p>
+
+      <h2>Optional H Band Watch Connection</h2>
+      <p>Traillog uses the Veepoo Bluetooth SDK to communicate with supported H Band watches. The E500 live heart-rate recording flow has been tested; other models depend on their hardware and firmware.</p>
+      <p>H Band watch readings and imported health records are processed and stored on your iPhone. Traillog does not upload these readings to CloudKit, include them in iCloud shares, or write them to Apple Health. Apple Health access for native Traillog activities is controlled separately through your permissions. Apple device-backup behavior is described above.</p>
+      <p>H Band and Traillog need to take turns using the watch connection. You choose when to scan, connect or import in Traillog. You can disconnect in Traillog and revoke Bluetooth permission in iOS Settings. The Veepoo SDK is used for watch communication, not advertising or developer-operated analytics.</p>
 
       <h2>Children's Privacy</h2>
       <p>Traillog is not intended for children under 13.</p>
